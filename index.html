@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <div align="center" class="card-1">
+        <img class="card-1__img" src="https://lastfm.freetls.fastly.net/i/u/ar0/5a7a69a25b65f15a6e2201dd5be75c7f" alt="">
+        <p class="card-1__name">Twenty One Pilots - Bandito</p>
+        <audio class="card-1__music" auto preload loop controls src="./music/twenty one pilots - Bandito.mp3"></audio>
+    </div>
+
+    <div align="center" class="card-2">
+        <img class="card-2__img" src="https://upload.wikimedia.org/wikipedia/en/d/d1/Twenty_One_Pilots_-_Car_Radio.png" alt="">
+        <p class="card-2__name">Twenty One Pilots - Car Radio</p>
+        <audio class="card-2__music" auto preload controls src="./music/twenty one pilots - car radio.mp3"></audio>
+    </div>
+    
+
+    <!-- autoplay - атрибут-прапорець, якщо присутній, відтворення аудіо починається як тільки воно доступне
+        loop - атрибут-прапорець, якщо присутній, аудіо буде повторюватися в циклі
+Атрибут preload вказує режим попереднього завантаження аудіофайлу. Його значення впливає на те, яка інформація буде завантажена. Значення за замовчуванням залежить від браузера, в якому була відкрита веб-сторінка.
+
+none - не завантажувати аудіо заздалегідь
+metadata - завантажити службову інформацію (тривалість тощо)
+auto - заздалегідь завантажувати увесь аудіофайл -->
+
+
+<!-- src - вказує адресу відеофайлу
+poster - адреса зображення, яке використовується як постер, якщо відео завантажене або ще не відтворюється
+width і height - задають висоту і ширину як у зображення
+controls - атрибут-прапорець, якщо присутній, додаються елементи управління відео
+autoplay - атрибут-прапорець, якщо присутній, відтворення відео починається як тільки воно доступне
+loop - атрибут-прапорець, якщо присутній, відео буде повторюватися в циклі
+Атрибут preload вказує режим попереднього завантаження відео. Його значення впливає на те, яка інформація буде завантажена. Значення за замовчуванням залежить від браузера, в якому була відкрита веб-сторінка.
+
+none - не завантажувати відео заздалегідь
+metadata - завантажити службову інформацію (тривалість тощо)
+auto - заздалегідь завантажувати всі відео
+ -->
+</body>
+</html>
