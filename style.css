@@ -10,53 +10,580 @@
 
 body{
     background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
     background-image: url(https://wallpaperaccess.com/full/705467.jpg);
+    overflow: hidden;
+}
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-image: url(https://bogatyr.club/uploads/posts/2023-01/thumbs/1674954731_bogatyr-club-p-fon-dlya-khedera-fon-krasivo-34.jpg);
+    background-size: cover;
+    transform: translateY(-100px);
+    animation: header 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) forwards;
+    animation-delay: 2s;
+    z-index: 1000;
+}
+@keyframes header{
+    100%{
+        transform: translateY(0);
+    }
+}
+.header__body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header__logo {
+    width: 40px;
+    animation: logo 4s linear infinite;
+}
+@keyframes logo{
+    0%{
+        transform: rotate(-360deg);
+    }
+}
+.header__nav {
+    display: flex;
+}
+.header__link {
+    margin: 0 30px;
+    text-transform: uppercase;
+     font-family: 'Dancing Script', cursive;
+     font-weight: 900;
+     letter-spacing: 2px;
+     cursor: pointer;
+     z-index: 1;
+     position: relative;
+     padding: 7px 16px;
+     transition: 0.4s;
+
+}
+.header__link:nth-child(1):hover{
+    color: #fb2828;
+}
+.header__link:nth-child(1)::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    transition: 0.4s;
+    z-index: -1;
+    height: 0%;
+    bottom: 0;
+    border-radius: 7px;
+    background-color: #000000;
+    left: 0;
+}
+.header__link:nth-child(1):hover::after{
+    height: 100%;
+}
+.header__link:nth-child(2):hover{
+    color: #091107;
+}
+.header__link:nth-child(2)::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    transition: 0.4s;
+    z-index: -1;
+    height: 0%;
+    bottom: 0;
+    border-radius: 7px;
+    background-color: #e3f212;
+    left: 0;
+}
+.header__link:nth-child(2):hover::after{
+    height: 100%;
+}
+.header__link:nth-child(3):hover{
+    color: #09e6ff;
+}
+.header__link:nth-child(3)::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    transition: 0.4s;
+    z-index: -1;
+    height: 0%;
+    bottom: 0;
+    border-radius: 7px;
+    background-color: #fb47e6;
+    left: 0;
+}
+.header__link:nth-child(3):hover::after{
+    height: 100%;
+}
+.header__botton {
+    background-color:#e3f212 ;
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-family: fantasy;
+    box-shadow: 0 0 5px #000;
+    transition: 0.4s;
+    cursor: pointer;
+    position: relative;
+    z-index: 8;
+    animation: but 1.5s linear infinite alternate;
+}
+@keyframes but{
+    0%{
+        background-color: #ff1de5;
+    }
+}
+.header__input {
+    display: none;
+}
+.header__label {
+}
+.header__input[type="checkbox"]:checked ~ .block__form{
+    transform: translateY(0px);
 }
 
+.block__form{
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 3;
+    background-color: #000000ea;
+    transition: 1s;
+    transform: translateY(-700px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form {
+    box-shadow: -4px 0px 20px #000;
+    background: linear-gradient(to left top, #000, #b2bd14);
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    height: 500px;
+    transition: 0.8s;
+    position: absolute;
+    
+  }
+  .form:hover{
+    box-shadow: 4px 0px 20px #000;
+  }
+  .text {
+    background-color: transparent;
+    padding: 10px;
+    width: 350px;
+    border-bottom: 1px solid #000000;
+    transition: 0.6s;
+    border-radius: 10px;
+  }
+  
+  .text:focus{
+    box-shadow: 0 0 5px #000;
+    background-color: #60d9db5a;
+   
+  }
+  .email {
+    background-color: transparent;
+    padding: 10px;
+    width: 350px;
+    transition: 0.6s;
+    border-radius: 10px;
+    border-bottom: 1px solid #000000;
+  }
+  .email:focus{
+   
+    box-shadow: 0 0 5px #000;
+    background-color: #60d9db5a;
+  }
+  .password {
+    background-color: transparent;
+    padding: 10px;
+    transition: 0.6s;
+    width: 350px;
+    border-radius: 10px;
+    border-bottom: 1px solid #000000;
+  }
+  .password:focus{
+  
+    box-shadow: 0 0 5px #000;
+    background-color: #60d9db5a;
+  }
+  .neon{
+      position: relative;
+      display: inline-block;
+      padding: 17px 22px;
+      margin: 20px 20px;
+        background-color: #000000;
+      color: #03e9f4;
+      font-size: 22px;
+        transform: translateY(-20px);
+        cursor: pointer;
+      text-decoration: none;
+      overflow: hidden;
+      z-index: 2;
+      letter-spacing: 2px;
+      -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+      animation:  neon-2 1.9s infinite alternate-reverse ;
+      transition: all 0.4s ease;
+      text-shadow: none;
+      border:none;
+  }
+  .neon:hover{
+      background: #03e9f4;
+      color: #1b0000;
+      box-shadow: 0 0 5px #03e9f4,
+      0 0 10px #03e9f4,
+      0 0 25px #03e9f4,
+      0 0 100px #03e9f4;
+      transition: all 0.4s ease;
+      border:none;
+  }
+  .neon::before {
+      display: none;
+  }
+  .neon span{
+      position: absolute;
+      display: block;
+  }
+  .neon span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #03e9f4 );
+      animation: animate1 3s linear infinite ;
+  }
+  @keyframes animate1{
+      0%{
+          left: -100%;
+      }
+      50%,100%{
+          left: 100%;
+      }
+  }
+  .neon span:nth-child(2) {
+      top: -100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, #03e9f4 );
+      animation: animate2 3s linear infinite ;
+      animation-delay: 0.7s;
+  }
+  @keyframes animate2{
+      0%{
+          top: -100%;
+      }
+      50%,100%{
+          top: 100%;
+      }
+  }
+  .neon span:nth-child(3) {
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(270deg, transparent, #03e9f4 );
+      animation: animate3 3s linear infinite ;
+      animation-delay: 1.5s;
+  }
+  @keyframes animate3{
+      0%{
+          right: -100%;
+      }
+      50%,100%{
+          right: 100%;
+      }
+  }
+  .neon span:nth-child(4) {
+      bottom: -100%;
+      left: 0%;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, #03e9f4 );
+      animation: animate4 3s linear infinite ;
+      animation-delay: 2.2s;
+  }
+  @keyframes animate4{
+      0%{
+          bottom: -100%;
+      }
+      50%,100%{
+          bottom: 100%;
+      }
+  }
+  
+  
+
+/* CONTENT */
+
+
+.box{
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    align-items: center;
+    margin: 0 auto;
+}
 /* CARD____1 */
-.card-1 {
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: linear-gradient(to left top, #000, #b2bd14); /* градієнт */
-    width: 350px; /* ширина */
-    height: 400px; /* висота */
-    display: inline-block; /* щоб вони стали в одну лінію */
+    width: 360px; /* ширина */
+    height: 450px; /* висота */
     padding-top: 30px; /* внутришній відступ зверху */
     border-radius: 20px; /* закруглює угли */
-    margin-left: 300px;
-    margin-top: 100px;
     /* коментар alt + shift + a */
+    transition: 1.5s;
+    position: relative;
+    margin-top: 100px;
+    z-index: 1;
+    box-shadow: inset 0 0 20px #000000b1;
 }
-.card-1__img {
+.card:hover{
+    transform: scale(1.05);
+}
+
+.lent-1{
+    position: absolute;
+    max-width: 230px;
+    top: -50px;
+    left: -60px;
+}
+
+.card__img {
     width: 200px;
+    /* animation: image 3s linear infinite alternate; */
+}
+/* @keyframes image{
+    0%{
+        transform: rotate(-2deg);
+    }
+    100%{
+        transform: rotate(2deg);
+    }
+}
+ */
+.card__name {
+    margin: 30px 0;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+}
+.card__music {
+}
+.card__button{
+    cursor: pointer;
+    margin-top: 8px;
+    padding: 12px 22px;
+    border-radius: 13px;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Rubik Puddles', cursive;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 2;
+   
+}
+.card__input-1[type="checkbox"]:checked ~ .card__label-1 .card__button{
+    transform: rotate(90deg);
+    color: #fee01c;
+   
+ }
+ .card__input-1[type="checkbox"]:checked ~ .card__label-1 .card__button::after{
+    position: absolute;
+    content: '';
+    background-color: #fee01c;
+    width: 100%;
+    height: 4px;
+    top: 0;
+    left: 0;
+    animation: buttons-1 4s linear infinite;
+ }
+ @keyframes buttons-1{
+    0%{
+       transform: translateX(-160px);
+    }
+    100%{
+        transform: translateX(160px);
+    }
+}
+.card__input-1[type="checkbox"]:checked ~ .card__label-1 .card__button::before{
+    position: absolute;
+    content: '';
+    background-color: #fee01c;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    right: 0;
+    animation: buttons-2 4s linear infinite;
+ }
+ @keyframes buttons-2{
+    0%{
+       transform: translateX(160px);
+    }
+    100%{
+        transform: translateX(-160px);
+    }
+}
+.card__button:hover{
+    background-color: #1a1a1a;
     
 }
-.card-1__name {
-    margin: 30px 0;
-    color: #fff;
-    font-size: 20px;
-    font-family: 'Dancing Script', cursive;
+.card__button::after{
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    width: 5px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    animation: button-1 2s linear infinite;
 }
-.card-1__music {
+@keyframes button-1{
+    0%{
+       transform: translateY(-40px);
+    }
+    100%{
+        transform: translateY(40px);
+    }
+}
+.card__button::before{
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    width: 5px;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    animation: button-2 2s linear infinite;
+}
+@keyframes button-2{
+    0%{
+       transform: translateY(40px);
+    }
+    100%{
+        transform: translateY(-40px);
+    }
+}
+/* CARD_____2 */
+.card:nth-child(2) {
+    background: linear-gradient(to left top, #fb2828, #09e6ff); /* градієнт */
+   
+}
+.card__input-1{
+display: none;
+}
+.card__input-2[type="checkbox"]:checked ~ .card__label-2 .card__button{
+    transform: rotate(-90deg);
+    color: #fee01c;
+   
+ }
+ .card__input-2[type="checkbox"]:checked ~ .card__label-2 .card__button::after{
+    position: absolute;
+    content: '';
+    background-color: #fee01c;
+    width: 100%;
+    height: 4px;
+    top: 0;
+    left: 0;
+    animation: buttons-4 4s linear infinite;
+ }
+ @keyframes buttons-4{
+    0%{
+       transform: translateX(-160px);
+    }
+    100%{
+        transform: translateX(160px);
+    }
+}
+.card__input-2[type="checkbox"]:checked ~ .card__label-2 .card__button::before{
+    position: absolute;
+    content: '';
+    background-color: #fee01c;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    right: 0;
+    animation: buttons-3 4s linear infinite;
+ }
+ @keyframes buttons-3{
+    0%{
+       transform: translateX(160px);
+    }
+    100%{
+        transform: translateX(-160px);
+    }
 }
 
-/* CARD_____2 */
-.card-2 {
-    background: linear-gradient(to left top, #fb2828, #09e6ff); /* градієнт */
-    width: 350px; /* ширина */
-    height: 400px; /* висота */
-    display: inline-block; /* щоб вони стали в одну лінію */
-    padding-top: 30px; /* внутришній відступ зверху */
-    border-radius: 20px; /* закруглює угли */
-    margin-left: 50px;
-    /* коментар alt + shift + a */
-}
-.card-2__img {
-    width: 200px;
-}
-.card-2__name {
-    margin: 30px 0;
+.block{
+    width: 400px;
+    text-align: center;
+
     color: #fff;
-    font-size: 20px;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    border-radius: 0 15px 15px 0;
+    padding: 20px;
     font-family: 'Dancing Script', cursive;
+    transition: 0.7s;
+    transform: translateX(-660px);
+    background: linear-gradient(to right bottom, #000, #b2bd14); /* градієнт */
 }
-.card-2__music {
+.card__input-1[type="checkbox"]:checked ~ .block{
+    transform: translateX(-250px);
 }
+
+.card__input-2{
+    display: none;
+    }
+    
+    
+    .block-2{
+        width: 400px;
+        text-align: center;
+        color: #fff;
+        position: absolute;
+        top: -40px;
+        right: 0;
+        border-radius: 15px 0px 0px 15px;
+        padding: 20px;
+        font-family: 'Dancing Script', cursive;
+        transition: 0.7s;
+        transform: translateX(660px);
+        background: linear-gradient(to right bottom, #fb2828, #09e6ff); /* градієнт */
+    }
+    .card__input-2[type="checkbox"]:checked ~ .block-2{
+        transform: translateX(250px);
+    }
+.ned{
+    position: absolute;
+    right: -120px;
+    bottom: -100px;
+    width: 200px;
+    transform: rotate(-50deg);
+    animation-delay: 2s;
+    animation: ned 7s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite alternate;
+    
+}
+@keyframes ned{
+    0%{
+        transform: translate(400px);
+    }
+}
+

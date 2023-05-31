@@ -7,24 +7,186 @@
     <title>Audio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <header class="header">
+        <div class="header__body">
+            <img class="header__logo" src="./img/logo site.png">
+            <ul class="header__nav">
+               <li class="header__link">Blurryface</li>
+               <li class="header__link">Trench</li>
+               <li class="header__link">Scaled And Icy</li>
+            </ul>
+            <input class="header__input" id="toch" type="checkbox">
+            <label class="header__label" for="toch">
+                <div class="header__botton">
+                    Log In
+                </div>
+            </label>
+            <div class="block__form">
+                <form class="form">
+                    <label for="name">Ім'я:</label>
+                    <input class="text" type="text" id="name" required>
+                    <br>
+                    <br>
+                    <label for="email">Email:</label>
+                    <input class="email" type="email" id="email" required>
+                    <br>
+                    <br>
+                    <label for="password">Пароль:</label>
+                    <input class="password" type="password" id="password" required>
+                    <br>
+                    <br>
+                    <button class="neon"type="button" onclick="validateForm()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Перевірити</button>
+                   
+                </form>
+            </div>
+           
+        </div>
+    </header>
     
-    <div align="center" class="card-1">
-        <img class="card-1__img" src="https://lastfm.freetls.fastly.net/i/u/ar0/5a7a69a25b65f15a6e2201dd5be75c7f" alt="">
-        <p class="card-1__name">Twenty One Pilots - Bandito</p>
-        <audio class="card-1__music" auto preload loop controls src="./music/twenty one pilots - Bandito.mp3"></audio>
-    </div>
 
-    <div align="center" class="card-2">
-        <img class="card-2__img" src="https://upload.wikimedia.org/wikipedia/en/d/d1/Twenty_One_Pilots_-_Car_Radio.png" alt="">
-        <p class="card-2__name">Twenty One Pilots - Car Radio</p>
-        <audio class="card-2__music" auto preload controls src="./music/twenty one pilots - car radio.mp3"></audio>
+    <div class="box">
+        <div class="card">
+            <img class="card__img" src="https://lastfm.freetls.fastly.net/i/u/ar0/5a7a69a25b65f15a6e2201dd5be75c7f" alt="">
+            <p class="card__name">Twenty One Pilots - Bandito</p>
+            <audio class="card__music" auto preload loop controls src="./music/twenty one pilots - Bandito.mp3"></audio>
+            <input class="card__input-1" id="toggle" type="checkbox">
+            <label class="card__label-1" for="toggle">
+                <div class="card__button">
+                    Text of sings
+                </div>
+            </label>
+            <div class="block">
+                BANDITO
+                <br>
+                 <br>
+                I could take the high road
+                But I know that I'm going low
+                I'm a ban-, I'm a bandito
+                I could take the high road
+                But I know that I'm going low
+                I'm a ban-, I'm a bandito
+                I could take the high road
+                But I know that I'm going low
+                I'm a ban-, I'm a bandito
+                This is the sound we make
+                When in between two places
+                Where are we used to bleed
+                And where're our blood needs to be
+                I could take the high road
+                But I know that I'm going low
+                I'm a ban-, I'm a bandito
+                I could take the high road
+                But I know that I'm going low
+                I'm a ban-, I'm a bandito
+                In city, I feel my spirit is contained
+                Like neon inside the glass, they form my brain
+                But I recently discovered it's a heatless fire
+                Like nicknames they give themselves to uninspire
+                Began with bullet, now add fire to the proof
+                But I'm still not sure if fear's a rival or close relative to truth
+                Either way it helps to hear these words bounce off of you
+                The softest echo could be enough for me to make it through
+                Folina
+                Sahlo Folina
+                Sahlo Folina
+                Sahlo Folina
+                I created this world
+                To feel some control
+                Destroy it if I want
+                So I sing Sahlo Folina
+                Sahlo Folina
+                Sahlo...
+                I could take the high road
+                But I know that I'm going low (Sahlo)
+                I'm a ban-, I'm a bandito
+                I could take the high road
+                But I know that I'm going low
+                I'm a ban-, I'm a bandito
+                I could take the high road
+                But I know that I'm going low (Sahlo)
+                I'm a ban-, I'm a bandito (Folina)
+                I created this world
+                To feel some control
+                Destroy it if I want
+                So I sing Sahlo Folina
+                Sahlo Folina</div>
+            
+        </div>
+        
+        <div class="card">
+            <img class="lent-1" src="./img/1.png" alt="">
+            <img class="card__img" src="https://upload.wikimedia.org/wikipedia/en/d/d1/Twenty_One_Pilots_-_Car_Radio.png" alt="">
+            <p class="card__name">Twenty One Pilots - Car Radio</p>
+            <audio class="card__music" auto preload controls src="./music/twenty one pilots - car radio.mp3"></audio>
+            <input class="card__input-2" id="toggle-2" type="checkbox">
+            <label class="card__label-2" for="toggle-2">
+                <div class="card__button">
+                    Text of sings
+                </div>
+            </label>
+            <div class="block-2">
+                CAR RADIO
+                <br>
+                <br>
+                I ponder of something great
+                My lungs will fill and then deflate
+                They fill with fire, exhale desire
+                I know it's dire, my time today
+                I have these thoughts so often, I ought
+                To replace that slot with what I once bought
+                'Cause somebody stole my car radio
+                And now I just sit in silence
+                Sometimes quiet is violent
+                I find it hard to hide it, my pride is no longer inside
+                It's on my sleeve, my skin will scream
+                Reminding me of who I killed inside my dream
+                I hate this car that I'm driving, there's no hiding for me
+                I'm forced to deal with what I feel
+                There is no distraction to mask what is real
+                I could pull the steering wheel
+                I have these thoughts so often, I ought
+                To replace that slot with what I once bought
+                'Cause somebody stole my car radio
+                And now I just sit in silence
+                I ponder of something terrifying
+                'Cause this time there's no sound to hide behind
+                I find over the course of our human existence
+                One thing consists of consistence
+                And it's that we're all battling fear
+                Oh dear, I don't know if we know why we're here
+                Oh my, too deep, please stop thinking
+                I liked it better when my car had sound
+                There are things we can do
+                But from the things that work there are only two
+                And from the two that we choose to do
+                Peace will win and fear will lose
+                And there's faith and there's sleep
+                We need to pick one please because
+                Faith is to be awake and to be awake is for us to think
+                And for us to think is to be alive
+                And I will try with every rhyme
+                To come across like I am dying
+                To let you know you need to try to think
+                I have these thoughts so often, I ought
+                To replace that slot with what I once bought
+                'Cause somebody stole my car radio
+                And now I just sit in silence</div>
+        </div>
     </div>
     
-
+    <img class="ned" src="https://cdn130.picsart.com/290659373006211.png" alt="">
+    
+   
     <!-- autoplay - атрибут-прапорець, якщо присутній, відтворення аудіо починається як тільки воно доступне
         loop - атрибут-прапорець, якщо присутній, аудіо буде повторюватися в циклі
 Атрибут preload вказує режим попереднього завантаження аудіофайлу. Його значення впливає на те, яка інформація буде завантажена. Значення за замовчуванням залежить від браузера, в якому була відкрита веб-сторінка.
