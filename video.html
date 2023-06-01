@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__body">
+            <img class="header__logo" src="./img/logo site.png">
+            <ul class="header__nav">
+                <li class="header__link">Blurryface</li>
+                <li class="header__link">Trench</li>
+                <li class="header__link">
+                    <a href="./video.html"> Scaled And Icy</a>
+                   
+                </li>
+            </ul>
+            <input class="header__input" id="toch" type="checkbox">
+            <label class="header__label" for="toch">
+                <div class="header__botton">
+                    Log In
+                </div>
+            </label>
+            <div class="block__form">
+                <form class="form">
+                    <label for="name">Ім'я:</label>
+                    <input class="text" type="text" id="name" required>
+                    <br>
+                    <br>
+                    <label for="email">Email:</label>
+                    <input class="email" type="email" id="email" required>
+                    <br>
+                    <br>
+                    <label for="password">Пароль:</label>
+                    <input class="password" type="password" id="password" required>
+                    <br>
+                    <br>
+                    <button class="neon"type="button" onclick="validateForm()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Перевірити</button>
+                   
+                </form>
+            </div>
+           
+        </div>
+    </header>
+
+    <main class="main">
+        <!--  <video poster="./додає зображення на відео" controls autoplay src="./"></video> -->
+        <div align="center" class="myVideo">
+            <iframe class="video" width="560" height="355" src="https://www.youtube.com/embed/jRIooapZy1w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="video" width="560" height="355" src="https://www.youtube.com/embed/3sO-Y1Zbft4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <button class="video__button">Подивитися ще...</button>
+        </div>
+        
+    </main>
+</body>
+</html>
