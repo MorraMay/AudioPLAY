@@ -16,12 +16,17 @@
         <div class="header__body">
             <img class="header__logo" src="./img/logo site.png">
             <ul class="header__nav">
-                <li class="header__link">Blurryface</li>
-                <li class="header__link">Trench</li>
-                <li class="header__link">
-                    <a href="./video.html"> Scaled And Icy</a>
-                   
-                </li>
+                <a class="header__link"  href="./blurry.html">
+                    Blurryface
+                </a> 
+               
+                <a class="header__link" href="./blurry.html">
+                    Trench
+                </a> 
+              
+                <a class="header__link" href="./blurry.html">
+                    Scaled And Icy
+                </a> 
             </ul>
             <input class="header__input" id="toch" type="checkbox">
             <label class="header__label" for="toch">
@@ -56,7 +61,6 @@
         </div>
     </header>
     
-
     <div class="box">
         <div class="card">
             <img class="card__img" src="https://lastfm.freetls.fastly.net/i/u/ar0/5a7a69a25b65f15a6e2201dd5be75c7f" alt="">
@@ -189,27 +193,26 @@
     
     <img class="ned" src="https://cdn130.picsart.com/290659373006211.png" alt="">
     
-   
-    <!-- autoplay - атрибут-прапорець, якщо присутній, відтворення аудіо починається як тільки воно доступне
-        loop - атрибут-прапорець, якщо присутній, аудіо буде повторюватися в циклі
-Атрибут preload вказує режим попереднього завантаження аудіофайлу. Його значення впливає на те, яка інформація буде завантажена. Значення за замовчуванням залежить від браузера, в якому була відкрита веб-сторінка.
-
-none - не завантажувати аудіо заздалегідь
-metadata - завантажити службову інформацію (тривалість тощо)
-auto - заздалегідь завантажувати увесь аудіофайл -->
-
-
-<!-- src - вказує адресу відеофайлу
-poster - адреса зображення, яке використовується як постер, якщо відео завантажене або ще не відтворюється
-width і height - задають висоту і ширину як у зображення
-controls - атрибут-прапорець, якщо присутній, додаються елементи управління відео
-autoplay - атрибут-прапорець, якщо присутній, відтворення відео починається як тільки воно доступне
-loop - атрибут-прапорець, якщо присутній, відео буде повторюватися в циклі
-Атрибут preload вказує режим попереднього завантаження відео. Його значення впливає на те, яка інформація буде завантажена. Значення за замовчуванням залежить від браузера, в якому була відкрита веб-сторінка.
-
-none - не завантажувати відео заздалегідь
-metadata - завантажити службову інформацію (тривалість тощо)
-auto - заздалегідь завантажувати всі відео
- -->
+    <input class="input__video" type="checkbox" id="video">
+    <label for="video">
+        <div class="video__button">Show More</div>
+    </label>
+    <div class="block__media">
+        <h2 class="media__title">
+            Bandit∅  Sh∅w
+        </h2>
+        <div class="block__video">
+            <img class="video__img-1" src="./img/1.png" alt="">
+            <img class="video__img-2" src="./img/2.png" alt="">
+            <div class="videos" align="center">
+                <video class="video" src="./video/videoplayback3.mp4"
+                controls
+                autoplay
+                muted
+                loop
+                width="600"></video>
+            </div>
+    </div>
+    
 </body>
 </html>

@@ -62,6 +62,7 @@ body{
      position: relative;
      padding: 7px 16px;
      transition: 0.4s;
+     color: #000;
 
 }
 .header__link:nth-child(1):hover{
@@ -139,12 +140,12 @@ body{
 .header__input {
     display: none;
 }
-.header__label {
-}
+
 .header__input[type="checkbox"]:checked ~ .block__form{
     transform: translateY(0px);
 }
 
+/* FORM------------------------------- */
 .block__form{
     width: 100%;
     height: 100vh;
@@ -351,6 +352,18 @@ body{
     margin-top: 100px;
     z-index: 1;
     box-shadow: inset 0 0 20px #000000b1;
+    
+}
+.card:nth-child(1){
+    animation: card-1 2s linear forwards;
+}
+@keyframes card-1{
+    0%{
+        transform: translateX(-1000px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
 }
 .card:hover{
     transform: scale(1.05);
@@ -367,23 +380,14 @@ body{
     width: 200px;
     /* animation: image 3s linear infinite alternate; */
 }
-/* @keyframes image{
-    0%{
-        transform: rotate(-2deg);
-    }
-    100%{
-        transform: rotate(2deg);
-    }
-}
- */
+
 .card__name {
     margin: 30px 0;
     color: #fff;
     font-size: 20px;
     font-family: 'Dancing Script', cursive;
 }
-.card__music {
-}
+
 .card__button{
     cursor: pointer;
     margin-top: 8px;
@@ -483,7 +487,15 @@ body{
 /* CARD_____2 */
 .card:nth-child(2) {
     background: linear-gradient(to left top, #fb2828, #09e6ff); /* градієнт */
-   
+    animation: card-2 2s linear forwards;
+}
+@keyframes card-2{
+    0%{
+        transform: translateX(1000px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
 }
 .card__input-1{
 display: none;
@@ -491,6 +503,7 @@ display: none;
 .card__input-2[type="checkbox"]:checked ~ .card__label-2 .card__button{
     transform: rotate(-90deg);
     color: #fee01c;
+    background-color: #f8398c;
    
  }
  .card__input-2[type="checkbox"]:checked ~ .card__label-2 .card__button::after{
@@ -571,6 +584,8 @@ display: none;
     .card__input-2[type="checkbox"]:checked ~ .block-2{
         transform: translateX(250px);
     }
+
+    /* NED________________________________-- */
 .ned{
     position: absolute;
     right: -120px;
@@ -587,29 +602,73 @@ display: none;
     }
 }
 
-.myVideo {
-    background-color: #b2bd14;
-    margin-top: 100px;
-    padding: 50px;
+/* VIDEO BLOCK-------------------- */
+
+.input__video {
+    display: none;
 }
-.video {
-    border: 10px solid #ff2121;
-    border-radius: 10px;
-    margin: 0 20px;
-}
-.video__button{
-    padding: 20px 40px;
-    margin-top: 40px;
-    background-color: #1f1f1f;
-    color: #fff;
-    border-radius: 10px;
-    font-size: 20px;
-    letter-spacing: 3px;
-    transition: 0.8s;
+.video__button {
+    font-family: 'Dancing Script', cursive;
+    width: 870px;
+    text-align: center;
+    padding: 10px ;
+    bottom: 0;
+    font-size: 25px;
+    position: absolute;
+    z-index: 5;
     cursor: pointer;
+    transition: 1s;
 }
 .video__button:hover{
-    background-color: #03e9f4;
-    color: #000;
-    letter-spacing: 0px;
+    color: #b2bd14;
+    font-size:28px ;
+}
+.input__video[type="checkbox"]:checked ~ .block__media{
+    transform: translateY(0);
+}
+.input__video[type="checkbox"]:checked ~ label .video__button {
+    transform: translateY(-455px);
+}
+.block__media {
+    transition: 1s;
+    position: absolute;
+    width: 850px;
+    height: 500px;
+    background-color: #d8d8d0;
+    bottom: 0;
+    z-index: 4;
+    box-shadow: inset 0 0 30px #000;
+    border-radius: 10px;
+    padding: 20px;
+    transform: translateY(455px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 20px;
+    justify-content: space-around;
+}
+.media__title {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Dancing Script', cursive;
+    color: #fee01c;
+    text-shadow: 0 0 2px #000;
+}
+.block__video {
+    position: relative;
+}
+.video__img-1 {
+    width: 200px;
+    position: absolute;
+    left: -70px; 
+    top: -60px;
+}
+.video__img-2{
+    width: 200px;
+    position: absolute;
+    right: -70px; 
+    top: -60px;
+}
+.video {
 }
